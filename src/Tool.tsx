@@ -26,23 +26,20 @@ export const Tool = () => {
 
   return (
     <IconButton key={TOOL_ID} title="change theme">
-      <WithTooltip
-        key={TOOL_ID}
-        placement="top"
-        trigger="click"
-        tooltip={
-          <TooltipLinkList
-            links={useMemo(
-              () => generateLinks(themes, updateGlobals),
-              [themes]
-            )}
-          />
-        }
-      >
-        <>
-          <span>THEME</span>
-        </>
-      </WithTooltip>
+      {themes ? (
+        <WithTooltip
+          key={TOOL_ID}
+          placement="top"
+          trigger="click"
+          tooltip={
+            <TooltipLinkList links={generateLinks(themes, updateGlobals)} />
+          }
+        >
+          THEME
+        </WithTooltip>
+      ) : (
+        <span>THEME NOT FOUND</span>
+      )}
     </IconButton>
   );
 };
