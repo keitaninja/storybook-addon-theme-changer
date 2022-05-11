@@ -1,4 +1,4 @@
-i<!-- README START -->
+<!-- README START -->
 
 # Storybook Addon Theme Changer
 
