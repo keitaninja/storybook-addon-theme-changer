@@ -19,15 +19,13 @@ i<!-- README START -->
 
 </div>
 
-![Animation](./docs/animation.gif)
+A simple addon for changing theme on Storybook. Inspired by [theme-change](https://github.com/saadeghi/theme-change)
 
-A simple addon for changing theme on Storybook.
+![Animation](./docs/animation.gif)
 
 This addon just controls themes such as **light** and **dark**, adding **data-theme** attribute of html tag.
 
 It works nicely with libraries like [daisyUI](https://github.com/saadeghi/daisyui).
-
-Inspired by [theme-change](https://github.com/saadeghi/theme-change)
 
 ## Getting Started
 
