@@ -7,7 +7,7 @@
 <div align="center">
 
 <a href="https://github.com/kwatanwa17/storybook-addon-theme-changer">
-<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/kwatanwa17/storybook-addon-theme-changer/release?label=release&logo=github">
+<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/kwatanwa17/storybook-addon-theme-changer/Release?label=Release&logo=github">
 </a>
 <a href="https://www.npmjs.com/package/storybook-addon-theme-changer">
 <img alt="npm" src="https://img.shields.io/npm/v/storybook-addon-theme-changer?logo=npm">

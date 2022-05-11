@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "A theme chnager Storybook addon",
   "keywords": [
-    "storybook",
     "storybook-addons",
+    "storybook",
     "theme",
     "dark-theme",
     "react",
