@@ -1,3 +1,15 @@
+# v0.1.2 (Wed May 11 2022)
+
+#### 🐛 Bug Fix
+
+- fix bag: map error when themes is undefined [#5](https://github.com/kwatanwa17/storybook-addon-theme-changer/pull/5) ([@kwatanwa17](https://github.com/kwatanwa17))
+
+#### Authors: 1
+
+- Keita Watanabe ([@kwatanwa17](https://github.com/kwatanwa17))
+
+---
+
 # v0.1.1 (Wed May 11 2022)
 
 #### 🐛 Bug Fix
