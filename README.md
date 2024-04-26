@@ -31,9 +31,11 @@ This addon just controls themes (for example, **light** and **dark**), just addi
 
 It works nicely with UI libraries such as [daisyUI](https://github.com/saadeghi/daisyui).
 
+Support Storybook 8
+
 ## Getting Started
 
-Add this addon to the `.storybook/main.js` file.
+Add this addon to the `.storybook/main.js (main.ts)` file.
 
 ```{javascript}
 module.exports = {
@@ -45,7 +47,7 @@ module.exports = {
 };
 ```
 
-Add your themes to the `.storybook/preview.js` file
+Add your themes to the `.storybook/preview.js (preview.ts)` file
 
 ```{javascript}
 ...
@@ -57,4 +59,16 @@ export const globalTypes = {
      ...
    ],
  },
+```
+
+or
+
+```{javascript}
+...
+export const globals = {
+    themes: [
+     "light",
+     "dark",
+     ...
+    ],
 ```
