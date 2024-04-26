@@ -1,14 +1,25 @@
 {
-  "name": "storybook-theme-changer",
-  "version": "0.0.0",
-  "description": "Storybook addon for switching different themes (ex. daisyUI, ChakraUI, etc.) ",
+  "name": "storybook-addon-theme-changer",
+  "version": "0.1.2",
+  "description": "A Storybook addon for switching different themes (ex. daisyUI etc.)",
   "keywords": [
+    "storybook-addons",
+    "storybook",
+    "theme",
+    "dark-theme",
+    "react",
     "tailwind",
-    "storybook-addons"
+    "tailwindcss",
+    "daisyUI"
   ],
   "repository": {
     "type": "git",
-    "url": "k"
+    "url": "https://github.com/kwatanwa17/storybook-addon-theme-changer"
+  },
+  "homepage": "https://github.com/kwatanwa17/storybook-addon-theme-changer",
+  "author": {
+    "name": "Keita Watanabe",
+    "email": "29068431+kwatanwa17@users.noreply.github.com"
   },
   "type": "module",
   "license": "MIT",
@@ -102,10 +113,19 @@
     ]
   },
   "storybook": {
-    "displayName": "Storybook Theme Changer",
+    "displayName": "Storybook Addon Theme Changer",
     "supportedFrameworks": [
       "react"
+    ]
+  },
+  "auto": {
+    "plugins": [
+      "npm"
     ],
-    "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
+    "onlyPublishWithReleaseLabel": true,
+    "baseBranch": "main",
+    "prereleaseBranches": [
+      "next"
+    ]
   }
 }
