@@ -71,4 +71,5 @@ export const globals = {
      "dark",
      ...
     ],
+},
 ```
