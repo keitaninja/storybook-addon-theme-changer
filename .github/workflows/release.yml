@@ -3,8 +3,8 @@ name: Release
 on:
   push:
     branches:
-      - main
-      - next
+      - "main"
+      - "next"
 
 jobs:
   release:
@@ -23,19 +23,19 @@ jobs:
           node-version: 18.x
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.0.1
+        uses: pnpm/action-setup@v3
         id: pnpm-install
         with:
           version: 8
           run_install: false
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: pnpm-deps-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-deps-${{ hashFiles('pnpm-lock.yaml') }}
+      # - name: Cache node modules
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: node_modules
+      #     key: pnpm-deps-${{ hashFiles('pnpm-lock.yaml') }}
+      #     restore-keys: |
+      #       pnpm-deps-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Install dependencies
         run: pnpm install
