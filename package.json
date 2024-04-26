@@ -23,7 +23,6 @@
   },
   "type": "module",
   "license": "MIT",
-  "author": "Keita Watanabe",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
