@@ -1,10 +1,10 @@
-module.exports = {
-  content: ["./stories/*.{js,ts,jsx,tsx}"],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
   plugins: [require("daisyui")],
-  // daisyUI config (optional)
   daisyui: {
     styled: true,
     themes: [
@@ -38,11 +38,5 @@ module.exports = {
       "coffee",
       "winter",
     ],
-    base: true,
-    utils: true,
-    logs: true,
-    rtl: false,
-    prefix: "",
-    darkTheme: "dark",
   },
 };

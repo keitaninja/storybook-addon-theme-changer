@@ -1,45 +1,62 @@
-import React, { useMemo } from "react";
-import { useGlobals } from "@storybook/api";
+import * as React from "react";
+import { memo } from "react";
+import { useGlobals } from "@storybook/manager-api";
 import {
   IconButton,
-  Icons,
   WithTooltip,
   TooltipLinkList,
+  TooltipMessage,
+  Link,
 } from "@storybook/components";
+import { ControlsIcon } from "@storybook/icons";
 
-import { TOOL_ID } from "./constants";
+import { TOOL_ID } from "@/constants";
+import { getThemes } from "@/utils";
 
-const generateLinks = (themes: string[], updateGlobals: any) => {
+interface GenerateLinkProps {
+  themes: string[];
+  updateGlobals: any;
+}
+
+const generateLinks = ({
+  themes,
+  updateGlobals,
+}: GenerateLinkProps) => {
   if (themes) {
     return themes.map((ele, index) => {
+      // return <div id={index.toString()}>{ele.toString()}</div>;
       return {
         id: index.toString(),
-        title: ele,
+        title: ele.toString(),
         onClick: () => updateGlobals({ theme: ele }),
       };
     });
-  } else return null;
+  }
 };
 
-export const Tool = () => {
-  const [{ themes }, updateGlobals] = useGlobals();
+export const Tool = memo(function MyAddonSelector() {
+  const [{ themes: themesObj }, updateGlobals] = useGlobals();
+  const { themes } = getThemes(themesObj);
 
   return (
-    <IconButton key={TOOL_ID} title="change theme">
-      {themes ? (
-        <WithTooltip
-          key={TOOL_ID}
-          placement="top"
-          trigger="click"
-          tooltip={
-            <TooltipLinkList links={generateLinks(themes, updateGlobals)} />
-          }
-        >
-          THEME
-        </WithTooltip>
-      ) : (
-        <span>THEME NOT FOUND</span>
-      )}
+    <IconButton key={TOOL_ID} title="Select theme">
+      <WithTooltip
+        key={TOOL_ID}
+        placement="top"
+        trigger="click"
+        tooltip={
+          themes ? (
+            <TooltipLinkList links={generateLinks({ themes, updateGlobals })} />
+          ) : (
+            <TooltipMessage
+              title="Error: Global(themes) not found"
+              desc="Please refer the doc and set themes following the instructions."
+            />
+          )
+        }
+      >
+        <ControlsIcon />
+      </WithTooltip>
     </IconButton>
   );
-};
+});
