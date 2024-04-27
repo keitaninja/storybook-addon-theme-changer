@@ -47,7 +47,7 @@ export const withGlobals = (
           window.localStorage.setItem("data-theme", theme);
 
           // DEBUG: debug purpose message
-          console.log("theme changed to: ", theme);
+          // console.log("theme changed to: ", theme);
         }
       }, [theme]);
     } else if (method === "ChakraUI") {
@@ -73,7 +73,7 @@ export const withGlobals = (
           localStorage.setItem("chakra-ui-color-mode", theme);
 
           // DEBUG: debug purpose message
-          console.log("theme changed to: ", theme);
+          // console.log("theme changed to: ", theme);
         }
       }, [theme]);
     }
