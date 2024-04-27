@@ -18,10 +18,7 @@ interface GenerateLinkProps {
   updateGlobals: any;
 }
 
-const generateLinks = ({
-  themes,
-  updateGlobals,
-}: GenerateLinkProps) => {
+const generateLinks = ({ themes, updateGlobals }: GenerateLinkProps) => {
   if (themes) {
     return themes.map((ele, index) => {
       // return <div id={index.toString()}>{ele.toString()}</div>;
@@ -39,24 +36,24 @@ export const Tool = memo(function MyAddonSelector() {
   const { themes } = getThemes(themesObj);
 
   return (
-    <IconButton key={TOOL_ID} title="Select theme">
-      <WithTooltip
-        key={TOOL_ID}
-        placement="top"
-        trigger="click"
-        tooltip={
-          themes ? (
-            <TooltipLinkList links={generateLinks({ themes, updateGlobals })} />
-          ) : (
-            <TooltipMessage
-              title="Error: Global(themes) not found"
-              desc="Please refer the doc and set themes following the instructions."
-            />
-          )
-        }
-      >
+    <WithTooltip
+      key={TOOL_ID}
+      placement="top"
+      trigger="click"
+      tooltip={
+        themes ? (
+          <TooltipLinkList links={generateLinks({ themes, updateGlobals })} />
+        ) : (
+          <TooltipMessage
+            title="Error: Global(themes) not found"
+            desc="Please refer the doc and set themes following the instructions."
+          />
+        )
+      }
+    >
+      <IconButton key={TOOL_ID} title="Select theme">
         <ControlsIcon />
-      </WithTooltip>
-    </IconButton>
+      </IconButton>
+    </WithTooltip>
   );
 });
