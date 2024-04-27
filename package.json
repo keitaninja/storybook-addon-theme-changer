@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-theme-changer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Storybook addon for switching different themes (ex. daisyUI etc.)",
   "keywords": [
     "storybook-addons",
