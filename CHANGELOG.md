@@ -1,3 +1,15 @@
+# v0.2.1 (Sat Apr 27 2024)
+
+#### 🐛 Bug Fix
+
+- fix: fix tooltip icon button [#23](https://github.com/keitaninja/storybook-addon-theme-changer/pull/23) ([@keitaninja](https://github.com/keitaninja))
+
+#### Authors: 1
+
+- Keita Watanabe ([@keitaninja](https://github.com/keitaninja))
+
+---
+
 # v0.2.0 (Sat Apr 27 2024)
 
 #### 🚀 Enhancement
