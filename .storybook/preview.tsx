@@ -21,7 +21,8 @@ const preview: Preview = {
   globals: {
     themes: {
       // method: "data-theme", // "data-theme" or "ChakraUI" (default: "data-theme")
-      method: "data-theme", // "data-theme" or "ChakraUI" (default: "data-theme")
+      // method: "data-theme", // "data-theme" or "ChakraUI" (default: "data-theme")
+      method: "ChakraUI", // "data-theme" or "ChakraUI" (default: "data-theme")
       themes: [
         "light",
         "dark",

@@ -7,10 +7,10 @@ export interface ChakraUIButtonProps extends ButtonProps {
 }
 
 const ChakraUIButton = ({ label }: ChakraUIButtonProps) => {
-  const bg = useColorModeValue("teal.200", "teal.600");
-  const color = useColorModeValue("gray.800", "white");
+  // const bg = useColorModeValue("teal.200", "teal.600");
+  // const color = useColorModeValue("gray.800", "white");
   return (
-    <Button bg={bg} color={color}>
+    <Button colorScheme='blue'>
       {label}
     </Button>
   );
