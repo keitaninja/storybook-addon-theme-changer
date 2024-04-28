@@ -1,3 +1,15 @@
+# v0.2.2 (Sun Apr 28 2024)
+
+#### 🐛 Bug Fix
+
+- fix: render error [#24](https://github.com/keitaninja/storybook-addon-theme-changer/pull/24) ([@keitaninja](https://github.com/keitaninja))
+
+#### Authors: 1
+
+- Keita Watanabe ([@keitaninja](https://github.com/keitaninja))
+
+---
+
 # v0.2.1 (Sat Apr 27 2024)
 
 #### 🐛 Bug Fix
