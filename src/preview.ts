@@ -10,6 +10,7 @@
  */
 import type { Renderer, ProjectAnnotations } from "@storybook/types";
 import { withGlobals } from "./withGlobals";
+import withChakra from "./withChakra";
 
 /**
  * Note: if you want to use JSX in this file, rename it to `preview.tsx`

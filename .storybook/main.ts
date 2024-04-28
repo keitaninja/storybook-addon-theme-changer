@@ -21,6 +21,10 @@ const config: StorybookConfig = {
   },
   core: {
     disableTelemetry: true,
+    
+  },
+  features: {
+    emotionAlias: false,
   },
 };
 export default config;

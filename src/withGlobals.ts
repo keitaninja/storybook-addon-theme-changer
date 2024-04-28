@@ -63,15 +63,21 @@ export const withGlobals = (
         if (theme) {
           // document.documentElement.setAttribute("data-theme", theme);
           // document.documentElement.style.setProperty("color-scheme", theme);
-
           document.documentElement.dataset.theme = theme;
           document.documentElement.style.colorScheme = theme;
           document.body.classList // .getElementsByClassName("sb-main-padded sb-show-main")[0]
-            .add(theme === "light" ? chakraClassNames.light : chakraClassNames.dark);
+            .add(
+              theme === "light"
+                ? chakraClassNames.light
+                : chakraClassNames.dark,
+            );
           document.body.classList // .getElementsByClassName("sb-main-padded sb-show-main")[0]
-            .remove(theme === "light" ? chakraClassNames.dark : chakraClassNames.light);
+            .remove(
+              theme === "light"
+                ? chakraClassNames.dark
+                : chakraClassNames.light,
+            );
           localStorage.setItem("chakra-ui-color-mode", theme);
-
           // DEBUG: debug purpose message
           // console.log("theme changed to: ", theme);
         }
@@ -79,5 +85,5 @@ export const withGlobals = (
     }
   }
 
-  return StoryFn();
+  return StoryFn()
 };

@@ -6,7 +6,6 @@ import {
   WithTooltip,
   TooltipLinkList,
   TooltipMessage,
-  Link,
 } from "@storybook/components";
 import { ControlsIcon } from "@storybook/icons";
 
